@@ -1,0 +1,58 @@
+# Velora Studio (Aether Interior)
+
+Premium interior design studio landing page — elegant, minimal, editorial.
+
+## Stack
+Pure HTML, CSS, and JavaScript. No framework, no build step.
+
+## Structure
+```
+velora-studio/
+│
+├── index.html
+├── README.md
+├── favicon.ico
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css        (base styles, tokens, layout)
+│   │   └── responsive.css   (media-query breakpoints, loaded after style.css)
+│   ├── js/
+│   │   └── main.js
+│   └── images/              (placeholder — hero & project imagery currently hotlinked from Unsplash)
+```
+
+## Design tokens
+- **Background** `#F7F5F2` · **Text** `#181818` · **Secondary** `#6F6F6F` · **Accent** `#A98C64`
+- **Display type** Cormorant Garamond · **Body type** Inter
+- Generous whitespace, hairline dividers, no rounded-corner cards, no drop shadows.
+
+## Signature interactions
+- **Hero** — layered motion: scroll parallax on the background image plus a
+  subtle (~2%) mouse-move shift, on top of the big editorial headline.
+- **Featured Project** — full-bleed image with an overlaid caption and a
+  "View Case Study" link, sitting right after the hero.
+- **Services & Selected Projects** — both use the same NOVR-style
+  cursor-following image preview; hovering a row shifts the label 10px,
+  tints it gold, and floats a live thumbnail next to the cursor.
+- **Process** — hovering a step grows a gold line across the top border and
+  scales up the roman-numeral index.
+- **About stats** — the numbers count up from zero once scrolled into view.
+- **Footer** — doubles as a closing CTA ("Let's design your next space.")
+  with direct email/phone/Instagram links above the standard nav + copyright.
+
+## Sections
+Hero → Featured Project → About Studio → Services → Selected Projects →
+Design Process → Testimonials → Contact → Footer
+
+## Running locally
+Just open `index.html` in a browser — no server or build tools required.
+Swap the Unsplash URLs in `index.html` for your own photography before launch.
+`style.css` holds the base design; `responsive.css` holds only breakpoint
+overrides, so mobile/tablet tweaks stay isolated from the core layout.
+
+## Notes
+- Animations are intentionally minimal: scroll reveals, a subtle hero/featured
+  image zoom, and hover states. Nothing fires on load beyond the hero.
+- Fully responsive down to mobile, with a slide-in nav menu under 720px.
+- Respects `prefers-reduced-motion`.
